@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 import static Controller.InventoryManager.AddProduct;
+import static Controller.InventoryManager.SearchCategory;
 import static Controller.ReadFile.readStoreStock;
 import static Model.MapFactory.createMap;
 
@@ -57,6 +58,20 @@ public class DriverProgram {
                     AddProduct(map,categoria,producto,cantidad);
 
                     break;
+
+
+                case 2:
+                    System.out.println("Ingrese nombre de producto a buscar categoria: ");
+                    in.nextLine();
+                    producto = in.nextLine();
+                    System.out.println( SearchCategory(map, producto));
+
+                    break;
+
+                case 3:
+                    System.out.println("Ingrese nombre del producto que desea obtener datos");
+                    in.nextLine();
+                    producto = in.nextLine();
             }
         }
 
