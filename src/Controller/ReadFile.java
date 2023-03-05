@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.Producto;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.Scanner;
 
 public class ReadFile {
 
-    public static void readStoreStock(Map<String, List<String>> map){
+    public static void readStoreStock(Map<String, ArrayList<Producto>> map){
         try {
 
             File archivo = new File("C:\\Users\\danie\\Downloads\\ListadoProducto (2).txt");
@@ -23,7 +25,8 @@ public class ReadFile {
                 if (!map.containsKey(categoria)) {
                     map.put(categoria, new ArrayList<>());
                 }
-                map.get(categoria).add(producto);
+
+                map.get(categoria).add(new Producto(producto,1));
             }
 
 
@@ -32,7 +35,7 @@ public class ReadFile {
             System.out.println("Archivo no encontrado: " + e.getMessage());
         }
 
-        System.out.println(map);
+
     }
 }
 
