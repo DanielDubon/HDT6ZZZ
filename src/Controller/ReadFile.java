@@ -35,7 +35,7 @@ public class ReadFile {
             System.out.println("Archivo no encontrado: " + e.getMessage());
         }
 
-
+        System.out.println(map);
     }
 }
 

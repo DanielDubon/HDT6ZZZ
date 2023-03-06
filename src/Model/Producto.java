@@ -6,7 +6,7 @@ public class Producto {
 
     public Producto(String nombre, int cantidad){
         this.nombre = nombre;
-        this.cantidad = 1;
+        this.cantidad = cantidad;
     }
 
     public String getNombre() {
